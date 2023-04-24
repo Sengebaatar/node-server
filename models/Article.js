@@ -13,6 +13,8 @@ const articleSchema = new mongoose.Schema({
   },
   tag: {
     type: String
+  },  status: {
+    type: String
   }
 }, { timestamps: true })
 

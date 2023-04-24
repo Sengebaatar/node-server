@@ -55,10 +55,10 @@ app.get('/posts', async (req, res) => {
 
 // Create(POST), - үүсгэх
 app.post('/posts', async (req, res) => {
-  const { image, title, description, tag } = req.body;
+  const { image, title, description, tag, status } = req.body;
 
   const article = await Article.create({
-    image, title, description, tag
+    image, title, description, tag, status
   })
 
   res.status(201).json(article)
